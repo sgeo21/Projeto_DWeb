@@ -2,7 +2,7 @@
 
 ## 📋 Sobre o Projeto
 
-**Amor de Patas** é um site institucional fictício desenvolvido para uma ONG de adoção de animais. O objetivo da plataforma é divulgar animais disponíveis para adoção, apresentar a missão da organização e facilitar o processo de solicitação de adoção por meio de um formulário simples e intuitivo.
+**Amor de Patas** é um site institucional fictício desenvolvido para uma ONG de adoção de animais fictícia. O objetivo da plataforma é divulgar animais disponíveis para adoção, apresentar a missão da organização e facilitar o processo de solicitação de adoção por meio de um formulário simples e intuitivo.
 
 O projeto foi desenvolvido com foco em uma interface amigável, acessível e responsiva, proporcionando uma experiência agradável para usuários interessados em encontrar um novo companheiro de quatro patas.
 
@@ -147,3 +147,9 @@ Adotar um animal é um ato de amor e responsabilidade. Antes de adotar, certifiq
 
 ### 🐾 Amor de Patas
 *"Transformando vidas através do amor e da adoção responsável."*
+
+---
+## Desnvolvido por
+
+🔗 [Geovana Cazali](https://github.com/sgeo21)
+🔗 [Lucas Acorsi](https://github.com/LucasAcorsi)
