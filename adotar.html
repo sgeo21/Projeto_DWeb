@@ -14,64 +14,73 @@
             <a href="index.html">Voltar</a>
         </nav>
     </header>
-    </section>
 
-        <section id="animais" class="animais">
-            <h2>Animais Disponíveis</h2>
+    <section id="animais" class="animais">
+        <h2>Animais para adoção <span class="contador-badge" id="contador-animais"></span></h2>
 
-            <div class="cards">
+        <div class="cards">
 
-                <div class="card">
-                    <img src="./assets/img/thor.jfif" alt="Cachorro">
-                    <h3>Thor</h3>
-                    <p>2 anos • Porte Médio</p>
-                </div>
-
-                <div class="card">
-                    <img src="./assets/img/cat1.png" alt="Gato">
-                    <h3>Luna</h3>
-                    <p>1 ano • Muito carinhosa</p>
-                </div>
-
-                <div class="card">
-                    <img src="./assets/img/mel.jfif" alt="Cachorro">
-                    <h3>Mel</h3>
-                    <p>3 anos • Adora brincar</p>
-                </div>
-
-                <div class="card">
-                    <img src="./assets/img/tobias.jpg" alt="Cachorro">
-                    <h3>Tobias</h3>
-                    <p>9 anos • Adora passear</p>
-                </div>
-
-                <div class="card">
-                    <img src="./assets/img/cat.jfif" alt="Gato">
-                    <h3>Joelma</h3>
-                    <p>1 ano • Ama crianças</p>
-                </div>
-
-                <div class="card">
-                    <img src="./assets/img/merida.jfif" alt="Cachorro">
-                    <h3>Merida</h3>
-                    <p>6 meses • Ama ganhar ossinho</p>
-                </div>
-
+            <div class="card">
+                <img src="./assets/img/thor.jfif" alt="Cachorro Thor">
+                <h3>Thor</h3>
+                <p>2 anos • Porte Médio</p>
+                <button class="btn-adotar" data-animal="Thor">Quero Adotar 🐾</button>
             </div>
-        </section>
+
+            <div class="card">
+                <img src="./assets/img/cat1.png" alt="Gato Luna">
+                <h3>Luna</h3>
+                <p>1 ano • Muito carinhosa</p>
+                <button class="btn-adotar" data-animal="Luna">Quero Adotar 🐾</button>
+            </div>
+
+            <div class="card">
+                <img src="./assets/img/mel.jfif" alt="Cachorro Mel">
+                <h3>Mel</h3>
+                <p>3 anos • Adora brincar</p>
+                <button class="btn-adotar" data-animal="Mel">Quero Adotar 🐾</button>
+            </div>
+
+            <div class="card">
+                <img src="./assets/img/tobias.jpg" alt="Cachorro Tobias">
+                <h3>Tobias</h3>
+                <p>9 anos • Adora passear</p>
+                <button class="btn-adotar" data-animal="Tobias">Quero Adotar 🐾</button>
+            </div>
+
+            <div class="card">
+                <img src="./assets/img/cat.jfif" alt="Gato Joelma">
+                <h3>Joelma</h3>
+                <p>1 ano • Ama crianças</p>
+                <button class="btn-adotar" data-animal="Joelma">Quero Adotar 🐾</button>
+            </div>
+
+            <div class="card">
+                <img src="./assets/img/merida.jfif" alt="Cachorro Merida">
+                <h3>Merida</h3>
+                <p>6 meses • Ama ganhar ossinho</p>
+                <button class="btn-adotar" data-animal="Merida">Quero Adotar 🐾</button>
+            </div>
+
+        </div>
+    </section>
 
     <main class="form-container">
 
         <h2>Formulário de Adoção</h2>
 
-        <form>
-            <input type="text" placeholder="Nome Completo" required>
+        <form id="form-adocao" novalidate>
 
-            <input type="email" placeholder="E-mail" required>
+            <input type="text" id="nome" placeholder="Nome Completo" required>
+            <span class="erro" id="erro-nome"></span>
 
-            <input type="tel" placeholder="Telefone" required>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <span class="erro" id="erro-email"></span>
 
-            <select required>
+            <input type="tel" id="telefone" placeholder="Telefone" required maxlength="15">
+            <span class="erro" id="erro-telefone"></span>
+
+            <select id="animal" required>
                 <option value="">Animal de Interesse</option>
                 <option>Thor</option>
                 <option>Luna</option>
@@ -80,17 +89,31 @@
                 <option>Joelma</option>
                 <option>Merida</option>
             </select>
+            <span class="erro" id="erro-animal"></span>
 
-            <textarea rows="5" placeholder="Conte um pouco sobre você"></textarea>
+            <textarea id="mensagem" rows="5" placeholder="Conte um pouco sobre você e sua casa 🏠"></textarea>
 
             <button type="submit">Enviar Solicitação</button>
+
         </form>
 
     </main>
 
+    <!-- Modal de sucesso -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal-box">
+            <div class="modal-icone">🐾</div>
+            <h3 id="modal-titulo"></h3>
+            <p id="modal-texto"></p>
+            <button id="modal-fechar">Fechar</button>
+        </div>
+    </div>
+
     <footer>
         <p>© 2026 Amor de Patas - Todos os direitos reservados.</p>
     </footer>
+
+    <script src="./assets/js/script.js"></script>
 
 </body>
 </html>
